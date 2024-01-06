@@ -1,35 +1,25 @@
 
 import React, { Component } from 'react';
 import './App.css'
-import First from './first'
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      monster : [
-        {
-
-          name:'franklin',
-          id: 'aasd1'
-        },
-        {
-          name:'dorbeman',
-          id:'aasd2'
-        },
-        {
-          name:"pristiges",
-          id:'assd3'
-        }
-        
-      ]
+      monster : []
     };
+  }
+
+  componentDidMount(){
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(users => this.setState({ monster : users}));
   }
   render(){
   return (
     <>
      <h1>Hello world</h1>
-     {/* <First /> */}
+ 
 
 
      <h3>create app with vite </h3> 
