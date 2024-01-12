@@ -8,7 +8,6 @@ function App() {
 
   const addValue = () => {
     setCounter(Counter + 1);
-
     if (Counter == 20) {
       setCounter(20);
     }
@@ -24,7 +23,8 @@ function App() {
   return (
     <>
       <h1> hello world</h1>
-      <h2>This is a counter project code</h2>
+      
+      <h2>This is a counter project </h2>
       <h3>Counter Value : {Counter}</h3>
       <button onClick={addValue}>Add value +</button> <br />
       <button onClick={removeValue}>Remove value -</button>
