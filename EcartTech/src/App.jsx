@@ -9,9 +9,9 @@ function App() {
     {/* <h1> First Project in React </h1> */}
     {/* <Counter /> */}
 
-    <h2 className='bg-green-400 text-black p-4 rounded-xl'>Tailwind install</h2>
+    <h2 className='bg-green-400 text-black p-4 rounded-xl'>Tailwind CSS Learn</h2>
     
-    <LoginTailwind />
+    {/* <LoginTailwind /> */}
     </>
   );
 }
