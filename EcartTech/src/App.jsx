@@ -16,7 +16,7 @@ function App() {
 
     {/* <Card /> */}
 
-    <SecondCard username="jaydipWebDev" btnText="click Me"/>
+    <SecondCard username="jaydipWebDev" btnText="learn more"/>
     </>
   );
 }
