@@ -25,9 +25,9 @@ function Counter(){
       <h1> hello world</h1>
 
       <h2>This is a counter project </h2>
-      <h3>Counter Value : {Counter}</h3>
+      <h3>Counter Value : {Counter}</h3><br />
       <button onClick={addValue}>Add value +</button> <br />
-      <button onClick={removeValue}>Remove value -</button>
+      <button onClick={removeValue}>Remove value -</button><br />
     </>
     )
     
