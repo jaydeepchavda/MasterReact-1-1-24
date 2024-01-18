@@ -10,13 +10,13 @@ function App() {
     {/* <h1> First Project in React </h1> */}
     {/* <Counter /> */}
 
-    <h2 className='bg-green-400 text-black p-4 rounded-xl'>Tailwind CSS Learn</h2><br />  
+    {/* <h2 className='bg-green-400 text-black p-4 rounded-xl'>Tailwind CSS Learn</h2><br />   */}
     
     {/* <LoginTailwind /> */}
 
     {/* <Card /> */}
 
-    <SecondCard username="jaydipWebDev" btnText="learn more"/>
+    {/* <SecondCard username="jaydipWebDev" btnText="learn more"/> */}
     </>
   );
 }
