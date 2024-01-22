@@ -1,18 +1,18 @@
 import React from "react";
 
-function RestarantCard(){
+function RestarantCard({resName , cuisine, rating, image, time, price}){
     return(
         <>
       
         <div className="res-card">
         <img className="res-logo"
-        src="https://c4.wallpaperflare.com/wallpaper/869/719/717/cuisine-food-india-indian-wallpaper-preview.jpg"
+        src={image}
          alt="meghana food logo" />
-            <h3> Meghana Foods  </h3>
-            <h4>Biriyani , North indias fav dish </h4>
-            <h4>4.4 stars </h4>
-            <h4>28 minutes ready</h4>
-            <h4>Price : 150rs </h4>
+            <h3> {resName} </h3>
+            <h4> {cuisine}</h4>
+            <h4> {rating} </h4>
+            <h4> {time}</h4>
+            <h4> {price} </h4>
         </div>
         </>
     )

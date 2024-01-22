@@ -15,8 +15,7 @@
 }
 
 .logo:hover{
-    cursor: pointer;
-
+    cursor: pointer
 }
 .nav-Items > ul > li:hover {
         cursor: pointer;
