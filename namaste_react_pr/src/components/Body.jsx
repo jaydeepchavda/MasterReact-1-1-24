@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import RestarantCard from "./RestaurantCard";
+// import { resList } from "../utils/mockData";
 function Body(){
+    // const [listOfRestaurant, setListOfRestaurant] = useState(resList)
     return(
         <div className="body">
-            <div className="search"><label htmlFor="input text">search here </label> 
-            <input type="text" />
-            <span className="search-button"><button type="button">click me</button></span>
-            </div>
+            <div className="filter">
+            <button className="filter-btn" 
+            onClick={() => {
+                console.log("button clicked")
+            }}
+            >Top Rated Restaurants</button>
+            </div> 
            
+            {/* <div className="res-container">
+                    {listOfRestaurant.map((Restaurant)=>{
+
+                        <RestarantCard key={Restaurant.data.id} resData={Restaurant} />
+                    })}
+            </div> */}
 
             <div className="res-container">
                 <RestarantCard 
