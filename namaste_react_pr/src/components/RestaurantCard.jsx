@@ -1,20 +1,40 @@
-import React from "react";
+import { CDN_URL } from "../utils/Contants";
 
-function RestarantCard({resName , cuisine, rating, image, time, price}){
-    return(
-        <>
-      
-        <div className="res-card">
-        <img className="res-logo"
-        src={image}
-         alt="meghana food logo" />
-            <h3> {resName} </h3>
-            <h4> {cuisine}</h4>
-            <h4> {rating} </h4>
-            <h4> {time}</h4>
-            <h4> {price} </h4>
-        </div>
-        </>
-    )
-}
-export default RestarantCard;
+const RestaurantCard = (props) => {
+  const { resData } = props;
+
+  const {
+    cloudinaryImageId,
+    name,
+    cuisines,
+    avgRating,
+    costForTwo,
+    deliveryTime,
+  } = resData?.data;
+
+  return (
+    <div
+      className="res-card"
+      style={{
+        backgroundColor: '#f0f0f0',
+      }}
+    >
+      <img
+        className="res-logo"
+        src={CDN_URL + cloudinaryImageId}
+        alt="Biryani"
+      />
+
+      <div className="res-card-content">
+        <h3>{name}</h3>
+        <hr />
+        <em>{cuisines.join(', ')}</em>
+        <h4>{avgRating} stars</h4>
+        <h4>₹{costForTwo / 100} FOR TWO</h4>
+        <h4>{deliveryTime} minutes</h4>
+      </div>
+    </div>
+  );
+};
+
+export default RestaurantCard;

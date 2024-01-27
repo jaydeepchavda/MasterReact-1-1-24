@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import RestaurantCard from './RestaurantCard';
+import RestaurantCard from './RestaurantCard'
 import Shimmer from './Shimmer';
 
 const Body = () => {
@@ -20,18 +20,18 @@ const Body = () => {
     fetchData();
   }, []);
 
-  const fetchData = async () => {
+   const fetchData = async () => {
     const data = await fetch(
       'https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.624480699999999&page_type=DESKTOP_WEB_LISTING'
     );
 
     const json = await data.json();
 
-    console.log(json);
+    // console.log(json);
     // * optional chaining
     // setListOfRestaurants(json.data.cards[2].data.data.cards);
-    setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+    setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   };
 
   // * Conditional Rendering
@@ -41,7 +41,8 @@ const Body = () => {
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
-  ) : (
+  ) :
+   (
     <div className="body">
       {/* <div className="search-container">
         <input type="text" placeholder="Search Food or Restaurant" />
@@ -93,7 +94,7 @@ const Body = () => {
         {/* // * looping through the <RestaurentCard /> components Using Array.map() method */}
 
         {filteredRestaurant.map((restaurant) => (
-          <RestaurantCard key={restaurant.data.id} resData={restaurant} />
+          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
     </div>
